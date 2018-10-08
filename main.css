@@ -1,3 +1,24 @@
+nav img {
+	width: 80px;
+}
+
+.header {
+	background-color: #2A5184;
+	color: #fff;
+}
+
+.header img {
+	width: 100%
+}
+
+h1 {
+	font-weight: bold;
+}
+
+.form h1 {
+	color: #2A5184;
+}
+
 label {
 	font-size: 15px;
 	font-weight: bold;
@@ -6,4 +27,42 @@ label {
 h3 {
 	font-family: monospace;
 	font-size: 30px;
+	color: #2A5184;
 }
+
+.kirim {
+	margin: 0 auto;
+}
+
+.kirim p {
+	color: red;
+}
+
+.kirim button {
+	border-radius: 40px;
+}
+
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+  font-family:monospace;
+  font-size:4em;
+  text-align:center;
+  width:100%;
+  display:block;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
