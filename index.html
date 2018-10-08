@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <title>Pendaftaran Pondok IT</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="text-center">Pendaftaran Pondok IT</h1>
+        <div>
+          <ul class="syarat">
+            <h3>Persyaratan :</h3>
+            <li class="">Muslim/Muslimah</li>
+            <li class="">Belum Menikah</li>
+            <li class="">Lulusan SMK/SMA Sederajat</li>
+            <li class="">Tidak Sedang Berkuliah/Bekerja</li>
+            <li class="">Usia Maksimal 23 Tahun</li>
+            <li class="">Punya Passion di bidang IT</li>
+            <li class="">Mendapatkan Izin Orang Tua</li>
+            <li class="">Siap Belajar dan Berkarya selama 3 Tahun</li>
+            <li class="">Memiliki Laptop, Bila Tidak ada dapat Meminjam Terlebih Dahulu</li>
+            <br><br>
+            <li class=""> *Jika dirasa sudah memenuhi persyaratan, anda dapat memulai mengisi form dibawah dan menekan tombol daftar jika telah selesai mengisi </li>
+            <li class=""> *Data pendaftaran anda pun akan di proses oleh tim kami. </li>
+          </ul>
+        </div>
+      </div>
+      <div class="form">
+        <form>
+          <h3><i class="material-icons">
+          person
+          </i> Data Diri</h3>
+          <div class="row pt-2 mb-3">
+            <div class="col-md-4 text-center">
+              <h4>Upload Foto</h4>
+              <img class="shadow img-fluid img-thumbnail" src="http://psb.qodr.or.id/img/preview.png" id='img-upload'/>
+              <div class="input-group">
+                  <span class="input-group-btn">
+                      <span class="btn btn-default btn-file">
+                        <input type="file" name="foto" id="imgInp">
+                      </span>
+                  </span>
+              </div>
+              </div>
+            <div class="col-md-8">
+             <div class="row bg-light shadow pt-2 border mb-3">
+                <div class="col-md-6">
+                  <div class="form-group valid-form has-feedback">
+                    <label class="syarat" for="nama">Nama Lengkap</label>
+                    <input reqired  value="" type="text" class="form-control" id="nama" name="nama" placeholder="Masukan nama" >
+                     <span  class="errorval errorRegis" id="errorName"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-feedback">
+                    <label class="syarat" for="ktp">Nomor Identitas (NIK/No KTP/No SIM) </label>
+                    <input reqired  value="" type="number" class="form-control" id="ktp" name="ktp" >
+                    <span  class="errorval errorRegis" id="error_ktp"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-feedback">
+                    <label class="syarat" for="tempat_lahir">Tempat Lahir</label>
+                    <input reqired value="" type="text" id="tempat_lahir" class="form-control" name="tempat_lahir" placeholder="Tempat lahir" >
+                    <span  class="errorval errorRegis" id="error_tempat_lahir"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-feedback">
+                    <label class="syarat" for="tanggal_lahir">Tanggal Lahir</label>
+                    <input reqired  value="" id="datepicker" type="text" class="form-control tanggal_lahir" name="tanggal_lahir" placeholder="dd/mm/yyyy" >
+                    <span  class="errorval errorRegis" id="error_tanggal_lahir"></span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group has-feedback">
+                    <label class="syarat" for="rumah">Alamat Rumah</label>
+                    <textarea reqired  value="" type="text" id="rumah" class="form-control" name="rumah" placeholder=" Ex : Jl, Wijoyo Mulyo No.64 Rt/Rw 02/06 Banguntapan..." ></textarea>
+                    <span  class="errorval errorRegis" id="error_rumah"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-feedback">
+                    <label class="syarat" for="kota">Kota</label>
+                    <input reqired  value="" type="text" class="form-control" id="kota" name="kota" >
+                    <span  class="errorval errorRegis" id="error_kota"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group valid-form has-feedback">
+                    <label class="syarat" for="divisi">Jurusan Yang Dituju</label>
+                    <select class="form-control" name="divisi" id="divisi" >
+                      <option value="">Pilih Jurusan</option>
+                      <option value="Programmer">Pondok Programmer</option>
+                      <option value="Multimedia">Pondok Multimedia</option>
+                      <option value="IMERS">Pondok IMERS</option>                         
+                    </select>
+                    <span class="errorval errorRegis" id="errorDivisi"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-feedback">
+                    <label class="syarat" for="hobi">Hobi</label>
+                    <input reqired  value="" type="text" id="hobi" class="form-control" name="hobi" >
+                    <span  class="errorval errorRegis" id="error_hobi"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group has-feedback">
+                    <label class="syarat" for="cita">Cita - Cita</label>
+                    <input reqired  value="" type="text" class="form-control" id="cita" name="cita" >
+                    <span  class="errorval errorRegis" id="error_cita"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3><i class="material-icons">
+              perm_contact_calendar
+              </i> Kontak</h3>
+          <div class="row bg-light shadow pt-2 border mb-3">
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="hp">Nomor HP</label>
+                <input reqired  value="" type="number" id="hp" class="form-control" name="hp" placeholder="08xxxxxxxxxx" >
+                <span  class="errorval errorRegis" id="error_hp"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="wa">Nomor WA</label>
+                <input reqired  value="" type="number" class="form-control" id="wa" name="wa" placeholder="08xxxxxxxxxx" >
+                <span  class="errorval errorRegis" id="error_wa"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="email">Email</label>
+                <input reqired  value="" type="email" id="email" class="form-control" name="email" placeholder="example@mail.com" >
+                <span  class="errorval errorRegis" id="error_email"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="facebook">Link Akun Facebook</label>
+                <input reqired  value="" type="url" class="form-control" id="facebook" name="facebook" placeholder="https://www.facebook.com/contoh">
+                <p style="color: red;">isi dengan link profile facebook kamu</p>
+                <span  class="errorval errorRegis" id="error_facebook"></span>
+              </div> 
+            </div>
+          </div>
+
+          <h3> <i class="material-icons">
+          school
+          </i> Pendidikan</h3>
+          <div class="row bg-light shadow pt-2 border mb-3">
+            <div class="col-md-2">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="lulusan">Lulusan</label>
+                <input reqired  value="" type="text" id="lulusan" class="form-control" name="lulusan" placeholder="SMA,SMP,SD,etc..." >
+                <span  class="errorval errorRegis" id="error_lulusan"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="jurusan">Jurusan  di Sekolah</label>
+                <input reqired  value="" type="text" class="form-control" id="jurusan" name="jurusan" >
+                <span  class="errorval errorRegis" id="error_jurusan"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="sekolah">Asal Sekolah</label>
+                <input reqired  value="" type="text" class="form-control" id="sekolah" name="sekolah" >
+                <span  class="errorval errorRegis" id="error_sekolah"></span>
+              </div>
+            </div>
+          </div>
+
+          <h3><i class="material-icons">
+          group
+          </i> Keluarga</h3>
+          <div class="row bg-light shadow pt-2 border mb-4">
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="jml_ortu">Kondisi Orang Tua</label>
+                <select class="form-control" name="jml_ortu" id="jml_ortu" >
+                  <option value="">Jumlah Ortu</option>
+                  <option value="lengkap">Lengkap</option>
+                  <option value="yatim">Yatim</option>
+                  <option value="piatu">Piatu</option>
+                  <option value="yatim_piatu">Yatim Piatu</option>
+                  <option value="cerai_hidup">Cerai Hidup</option>
+                </select>
+                <span class="errorval errorRegis" id="error_jml_ortu"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="hp_ortu">Nomor HP Ortu</label>
+                <input reqired  value="" type="number" class="form-control" id="hp_ortu" name="hp_ortu" >
+                 <span  class="errorval errorRegis" id="error_hp_ortu"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="izin">Izin Dari Ortu / Wali</label>
+                <select class="form-control" name="izin" id="izin" >
+                  <option value="">Pilihan</option>
+                  <option value="sudah">Sudah</option>
+                  <option value="belum">Belum</option>
+                </select>
+                 <span class="errorval errorRegis" id="error_izin"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="nama_ayah">Nama Ayah</label>
+                <input reqired  value="" type="text" id="nama_ayah" class="form-control" name="nama_ayah" >
+                <span  class="errorval errorRegis" id="errornama_ayah"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="nama_ibu">Nama Ibu</label>
+                <input reqired  value="" type="text" class="form-control" id="nama_ibu" name="nama_ibu" >
+                <span  class="errorval errorRegis" id="errornama_ibu"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="p_ayah">Pekerjaan Ayah</label>
+                <input reqired  value="" type="text" id="p_ayah" class="form-control" name="p_ayah" >
+                <span  class="errorval errorRegis" id="error_p_ayah"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="p_ibu">Pekerjaan Ibu</label>
+                <input reqired  value="" type="text" class="form-control" id="p_ibu" name="p_ibu" >
+                <span  class="errorval errorRegis" id="error_p_ibu"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="gaji">Gaji Ortu / Bulan</label>
+                <input reqired  value="" type="number" id="gaji" class="form-control" name="gaji"  >
+                <span  class="errorval errorRegis" id="error_gaji"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="j_saudara">Jumlah Saudara</label>
+                <input reqired value="" type="number" class="form-control j_saudara" id="j_saudara" name="j_saudara" >
+                <span  class="errorval errorRegis" id="error_j_saudara"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="rizki">Apakah Orang Tuamu siap Berinfak setiap bulan</label>
+                <input reqired  value="" type="text" class="form-control" id="rizki" name="rizki" >
+                <span  class="errorval errorRegis" id="error_rizki"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="tau">Apakah Orang Tuamu Tau Tentang Pondok IT</label>
+                <input reqired  value="" type="text" class="form-control" id="tau" name="tau" >
+                <span  class="errorval errorRegis" id="error_tau"></span>
+              </div>
+            </div>
+          </div>
+          
+          <h3><i class="material-icons">
+          list_alt
+          </i> Kuesioner</h3>
+          <div class="row bg-light shadow pt-2 border mb-3">
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="laptop">Punya Laptop / Tidak</label>
+                <select class="form-control" name="laptop" id="laptop" >
+                  <option value="">Pilihan</option>
+                  <option value="sudah">Sudah</option>
+                  <option value="belum">Belum</option>
+                </select>
+                 <span class="errorval errorRegis" id="error_laptop"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="iq">Tes IQ <a style="color: #f00;" href="http://a.iqelite.com/iq/info/" target="_blank">Klik Disini</a></label>
+                <input reqired  value="" type="number" id="iq" class="form-control" name="iq" >
+                 <span  class="errorval errorRegis" id="error_iq"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="hafalan">Hafalan Al-Qur`an</label>
+                <input reqired  value="" type="text" class="form-control" id="hafalan" name="hafalan" >
+                <span  class="errorval errorRegis" id="error_hafalan"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="skill">Jelaskan Tentang Skill IT Yang Sudah Dimiliki</label>
+                <textarea  style="height: 100px;" name="skill" id="skill" class="form-control" row bg-lights="8" cols="70" ></textarea>
+                 <span  class="errorval errorRegis" id="error_skill"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="kelebihanmu">Sebutkan Minimal 5 Kelebihan Diri Anda (karakter)</label>
+                <textarea  style="height: 100px;" name="kelebihanmu" id="kelebihanmu" class="form-control" row bg-lights="8" cols="70" ></textarea>
+                 <span  class="errorval errorRegis" id="error_kelebihanmu"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="kekuranganmu">Sebutkan Minimal 5 Keburukan Diri Anda (karakter)</label>
+                <textarea  style="height: 100px;" name="kekuranganmu" id="kekuranganmu" class="form-control" row bg-lights="8" cols="70" ></textarea>
+                <span  class="errorval errorRegis" id="error_kekuranganmu"></span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="idola">Tokoh Idola</label>
+                <input reqired  value="" type="text" id="idola" class="form-control" name="idola" >
+                                        <span  class="errorval errorRegis" id="error_idola"></span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="buku">Buku Favorit</label>
+                <input reqired  value="" type="text" class="form-control" id="buku" name="buku" >
+                <span  class="errorval errorRegis" id="error_buku"></span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="ustad">Ustad Idola</label>
+                <input reqired  value="" type="text" id="ustad" class="form-control" name="ustad" >
+                <span  class="errorval errorRegis" id="error_ustad"></span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="tanggungan">Tanggungan Keluarga</label>
+                <input reqired  value="" type="text" id="tanggungan" class="form-control" name="tanggungan" >
+                <span  class="errorval errorRegis" id="error_tanggungan"></span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="rokok">Perokok / Tidak</label>
+                <input reqired  value="" type="text" class="form-control" id="rokok" name="rokok" >
+                <span  class="errorval errorRegis" id="error_rokok"></span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="pacar">Memiliki Pacar / Tidak</label>
+                <select class="form-control" name="pacar" id="pacar" >
+                  <option value="">--Pilih--</option>
+                  <option value="iya">Iya</option>
+                  <option value="tidak">Tidak</option>
+                </select>
+                <span class="errorval errorRegis" id="error_pacar"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="kesehatan">Riwayat Kesehatan</label>
+                <input reqired  value="" type="text" name="kesehatan" id="kesehatan" class="form-control" >
+                <span  class="errorval errorRegis" id="error_kesehatan"></span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="ada_tanggungan">Tanggungan Pribadi</label>
+                <select class="form-control" name="ada_tanggungan" id="ada_tanggungan" >
+                  <option value="">--Pilih--</option>
+                  <option value="iya">Siap</option>
+                  <option value="tidak">Tidak Siap</option>
+                </select>
+                 <span class="errorval errorRegis" id="error_ada_tanggungan"></span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="karya">Siap Untuk Berkarya</label>
+                <select class="form-control" name="karya" id="karya" >
+                  <option  value="">--Pilih--</option>
+                  <option value="iya">Siap</option>
+                  <option value="tidak">Tidak Siap</option>
+                </select>
+                <span class="errorval errorRegis" id="error_karya"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label  class="syarat" for="pernah">Pernah Belajar Dalam Bidang Yang Dituju?</label>
+                <select class="form-control" name="pernah" id="pernah" >
+                  <option value="">--Pilih--</option>
+                  <option value="iya">Pernah</option>
+                  <option value="tidak">Tidak Pernah</option>
+                </select>
+               <span class="errorval errorRegis" id="error_pernah"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="pemahaman">Pemahaman Agama</label>
+                <input reqired  value="" type="text" class="form-control" id="pemahaman" name="pemahaman" >
+                <span  class="errorval errorRegis" id="error_pemahaman"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="pernyataan">Amalan Yang Sering Dilakukan</label>
+                <input reqired  value="" type="text" class="form-control" id="pernyataan" name="pernyataan" >
+                <span  class="errorval errorRegis" id="error_pernyataan"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="limam">Kami mau Tanya Kalau Alloh Menitipkan Uang Kepadamu Sebesar 5M Ke Kamu, Uangnya mau Kamu Buat Apa ? (Baik Urusan Dunia Maupun Urusan Akhirat) , alokasikan menjadi 5 bagian, dan tentukan berapa jumlah untuk setiap alokasi </label>
+                <textarea  class="form-control" style="height: 100px;" name="limam" id="limam" row bg-lights="8" cols="70" ></textarea>
+                <span  class="errorval errorRegis" id="error_limam"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="kekurangan">Bagaimana Kamu Menyikapi Kekurangan Orang Lain? Karena Di Pondok Programmer Kamu Akan Menemui Banyak Karakter Orang </label>
+                <textarea  class="form-control" style="height: 100px;" name="kekurangan" id="kekurangan" row bg-lights="8" cols="70" ></textarea>
+                 <span  class="errorval errorRegis" id="error_kekurangan"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="marah">Hal Yang Menyebabkan Anda Marah</label>
+                <textarea  class="form-control" style="height: 100px;" name="marah" id="marah" row bg-lights="8" cols="70" ></textarea>
+                <span  class="errorval errorRegis" id="error_marah"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="bahagia">Hal Yang Menyebabkan Anda Bahagia</label>
+                <textarea  class="form-control" style="height: 100px;" name="bahagia" id="bahagia" row bg-lights="8" cols="70" ></textarea>
+                <span  class="errorval errorRegis" id="error_bahagia"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="alokasi">Siap Alokasi Ke Pondok</label>
+                <select class="form-control" name="alokasi" id="alokasi" >
+                  <option value="">--Pilih--</option>
+                  <option value="iya">Siap</option>
+                  <option value="tidak">Tidak Siap</option>
+                </select>
+                <span class="errorval errorRegis" id="error_alokasi"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="magang">Siap Untuk Magang</label>
+                <select class="form-control" name="magang" id="magang" >
+                  <option value="">--Pilih--</option>
+                  <option value="iya">Siap</option>
+                  <option value="tidak">Tidak Siap</option>
+                </select>
+                <span class="errorval errorRegis" id="error_magang"></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group has-feedback">
+                <label for="berjuang">Siap Untuk Berjuang</label>
+                <select class="form-control" name="berjuang" id="berjuang" >
+                  <option style="background-color:black;" value="">--Pilih--</option>
+                  <option value="iya">Siap</option>
+                  <option value="tidak">Tidak Siap</option>
+                </select>
+                <span class="errorval errorRegis" id="error_berjuang"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="cita_pondok">Siap Untuk Berjuang Meneruskan Cita-Cita Pondok</label>
+                <input reqired  value="" class="form-control" name="cita_pondok" id="cita_pondok" ></input>
+                <span  class="errorval errorRegis" id="error_cita_pondok"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="berinfak">Siap Untuk Berinfak Rutin Ketika Sudah Lulus</label>
+                <input reqired  value="" class="form-control" name="berinfak" id="berinfak" ></input>
+                <span  class="errorval errorRegis" id="error_berinfak"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="sudah_punya">Siap Mengalokasikan Ke Pondok Ketika Sudah Mendapatkan Uang</label>
+                <input reqired  value="" class="form-control" name="sudah_punya" id="sudah_punya" ></input>
+                <span  class="errorval errorRegis" id="error_sudah_punya"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="peraturan">Siap Untuk Mengikuti Aturan-Aturan Di pondok Baik yang Disukai Maupun yang Tidak Di Sukai </label>
+                <input  class="form-control" name="peraturan" id="peraturan" row bg-lights="8" cols="70" ></input>
+                <span  class="errorval errorRegis" id="error_peraturan"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="kekurangan_pondok">Siap Untuk Menerima Kekurangan Yang Ada Di Pondok  </label>
+                <input  class="form-control" name="kekurangan_pondok" id="kekurangan_pondok" row bg-lights="8" cols="70" ></input>
+                 <span  class="errorval errorRegis" id="error_kekurangan_pondok"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="kamu_tau"> Dari Mana Kamu Tau Pondok IT</label>
+                <input reqired  value="" class="form-control" name="kamu_tau" id="kamu_tau" ></input>
+                <span  class="errorval errorRegis" id="error_kamu_tau"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="impian">Sebutkan 10 Impian Terbesar Dalam Hidupmu </label>
+                <textarea  class="form-control" style="height: 100px;" name="impian" id="impian" row bg-lights="8" cols="70" ></textarea>
+                 <span  class="errorval errorRegis" id="error_impian"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="harapan">Apa Harapanmu jika di terima di PondokIT </label>
+                <textarea  class="form-control" style="height: 100px;" name="harapan" id="harapan" row bg-lights="8" cols="70" ></textarea>
+                <span  class="errorval errorRegis" id="error_harapan"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="alasan"> 10 Alasan Masuk Pondok </label>
+                <textarea  class="form-control" style=" height: 100px;" name="alasan" id="alasan" row bg-lights="8" cols="70" ></textarea>
+                <span  class="errorval errorRegis" id="error_alasan"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="jalani_kehidupan"> Sebutkan Hal-Hal Yang membuat Kamu Semangat Dalam Menjalani Kehidupan</label>
+                <textarea  style=" height: 100px;" class="form-control" name="jalani_kehidupan" id="jalani_kehidupan" ></textarea>
+                <span  class="errorval errorRegis" id="error_jalani_kehidupan"></span>
+              </div>
+            </div>
+          
+          </div>
+
+          <h3>
+          <i class="material-icons">
+          folder_open
+          </i> Dokumen</h3>
+          <div class="px-2 row bg-light shadow pt-2 border mb-3 px-3">
+            <div class="form-group has-feedback">
+              <label class="syarat" for="disc">Silahkan unduh file di bawah <br> <a class="btn btn-outline-primary" href="http://pendaftaran.pondokit.com/public/doc/DISC.xlsx">Download</a><br>Kemudian setelah di isi upload kembali di bawah ini</label>
+              <p style="color: red;">Hanya file XLSX yang boleh di Upload</p>
+              <input reqired  value="" type="file" name="disc" id="disc">
+              <span  class="errorval errorRegis" id="error_disc"></span>
+            </div>
+          </div>
+
+          <div>
+            <p class="syarat">*pastikan diisi dengan benar, karena anda hanya dapat mendaftar sebanyak 1 kali</p>
+            <div class="form-group">
+              <button name="submit" value="submit" id="submit" type="submit" class="shadow btn btn-outline-primary btn-lg">Kirim Data</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </body>
+</html>
