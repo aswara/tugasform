@@ -1,4 +1,5 @@
 $(document).ready( function() {
+
         $(document).on('change', '.btn-file :file', function() {
         var input = $(this),
             label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
@@ -23,8 +24,9 @@ $(document).ready( function() {
     });
 
 
+
 // function([string1, string2],target id,[color1,color2])    
- consoleText(['Programmer', 'Multimedia', 'Imers', 'Cyber'], 'text',['lightblue','white','lightblue','white']);
+ consoleText(['Programmer', 'Multimedia', 'Imers', 'Cyber'], 'text',['light','white','light','white']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];

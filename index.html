@@ -11,42 +11,39 @@
       rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.css">
 
+    <script src="http://pendaftaran.pondokit.com/public/assets/sweetalert2/sweetalert2.min.js"></script>
+    <link href="http://pendaftaran.pondokit.com/public/assets/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+
     <title>Pendaftaran Pondok IT</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a class="navbar-brand" href="#"><img src="http://www.pondokit.com/img/pondokit.png"></a>
+        <a class="navbar-brand" href="http://www.pondokit.com/"><img src="http://www.pondokit.com/img/pondokit.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="http://www.pondokit.com/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+              <a class="nav-link" href="http://www.pondokit.com/">Pengumuman</a>
+            </li>        
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
         </div>
       </nav>
     <div class="container-fluid">
       <div class="row header py-5">
-        <div class="col-xl-12 mt-3">
-          <h1 class="text-center">Pendaftaran Santri Baru Pondok IT</h1>
+        <div class="col-xl-12 mb-3">
+          <div>
+            <h1 class="text-center">Pendaftaran Santri Baru Pondok IT</h1>
+          </div>
         </div>
         <div class="col-xl-6">
           <div class="col-xl-12">
-            <img class="img-fluid py-4" src="http://www.pondokit.com/img/pondokit.png">
+            <img class="img-fluid my-3" src="http://www.pondokit.com/img/pondokit.png">
           </div>
           <div class="col-xl-12">
             <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
@@ -54,7 +51,7 @@
         </div>
         <div class="col-xl-6">
           <ul class="syarat">
-            <h3>Persyaratan :</h3>
+            <li class="text-center">Persyaratan</li>
             <li class="">Muslim/Muslimah</li>
             <li class="">Belum Menikah</li>
             <li class="">Lulusan SMK/SMA Sederajat</li>
@@ -64,9 +61,6 @@
             <li class="">Mendapatkan Izin Orang Tua</li>
             <li class="">Siap Belajar dan Berkarya selama 3 Tahun</li>
             <li class="">Memiliki Laptop, Bila Tidak ada dapat Meminjam Terlebih Dahulu</li>
-            <br><br>
-            <li class=""> *Jika dirasa sudah memenuhi persyaratan, anda dapat memulai mengisi form dibawah dan menekan tombol daftar jika telah selesai mengisi </li>
-            <li class=""> *Data pendaftaran anda pun akan di proses oleh tim kami. </li>
           </ul>
         </div>
       </div>
@@ -78,14 +72,11 @@
           </i> Data Diri</h3>
           <div class="row pt-2 mb-3">
             <div class="col-xl-4 text-center">
-              <h4>Upload Foto</h4>
-              <img class="shadow img-fluid img-thumbnail" src="http://psb.qodr.or.id/img/preview.png" id='img-upload'/>
-              <div class="input-group">
-                  <span class="input-group-btn">
-                      <span class="btn btn-default btn-file">
-                        <input type="file" name="foto" id="imgInp">
-                      </span>
-                  </span>
+              <h4>Foto Kamu</h4>
+              <img class="shadow img-fluid img-thumbnail" src="user.png" id='img-upload'/>
+              <div class="input-group upload">
+                <label class="btn btn-outline-primary shadow" for="imgInp">Upload Foto</label>
+                <input type="file" name="foto" id="imgInp">
               </div>
               </div>
             <div class="col-xl-8">
@@ -114,7 +105,7 @@
                 <div class="col-xl-6">
                   <div class="form-group has-feedback">
                     <label class="syarat" for="tanggal_lahir">Tanggal Lahir</label>
-                    <input reqired  value="" id="datepicker" type="text" class="form-control tanggal_lahir" name="tanggal_lahir" placeholder="dd/mm/yyyy" >
+                    <input reqired  value="" id="datepicker" type="date" class="form-control tanggal_lahir" name="tanggal_lahir" placeholder="dd/mm/yyyy" >
                     <span  class="errorval errorRegis" id="error_tanggal_lahir"></span>
                   </div>
                 </div>
@@ -135,7 +126,7 @@
                 <div class="col-xl-6">
                   <div class="form-group valid-form has-feedback">
                     <label class="syarat" for="divisi">Jurusan Yang Dituju</label>
-                    <select class="form-control" name="divisi" id="divisi" >
+                    <select class="form-control" name="divisi" id="divisi">
                       <option value="">Pilih Jurusan</option>
                       <option value="Programmer">Pondok Programmer</option>
                       <option value="Multimedia">Pondok Multimedia</option>
@@ -522,7 +513,7 @@
               <div class="form-group has-feedback">
                 <label for="berjuang">Siap Untuk Berjuang</label>
                 <select class="form-control" name="berjuang" id="berjuang" >
-                  <option style="background-color:black;" value="">--Pilih--</option>
+                  <option value="">--Pilih--</option>
                   <option value="iya">Siap</option>
                   <option value="tidak">Tidak Siap</option>
                 </select>
@@ -617,10 +608,10 @@
 
           <div class="text-center row  py-4 mb-3">
             <div class="col-xl-12">
-              <p class="syarat">*pastikan diisi dengan benar, karena anda hanya dapat mendaftar sebanyak 1 kali</p>
+              <p class="warning">*pastikan diisi dengan benar, karena anda hanya dapat mendaftar sebanyak 1 kali</p>
             </div>
             <div class="form-group kirim">
-              <button name="submit" value="submit" id="submit" type="submit" class="shadow btn btn-outline-success btn-lg px-5">Kirim Data</button>
+              <button style="font-weight: bold;" name="submit" value="submit" id="submit" type="submit" class="shadow btn btn-outline-primary btn-lg px-5">Kirim Data</button>
             </div>
 
           </div>
@@ -634,6 +625,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="http://pendaftaran.pondokit.com/public/js/pendaftaran.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://pendaftaran.pondokit.com/public/assets/validator/validator.min.js"></script>
   </body>
 </html>

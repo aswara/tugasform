@@ -2,6 +2,7 @@ nav img {
 	width: 80px;
 }
 
+
 .header {
 	background-color: #2A5184;
 	color: #fff;
@@ -30,18 +31,39 @@ h3 {
 	color: #2A5184;
 }
 
-.kirim {
-	margin: 0 auto;
+.upload input {
+	display: none;
 }
 
-.kirim p {
-	color: red;
+.upload label {
+	margin: 10px auto;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.kirim {
+	margin: 0 auto;
 }
 
 .kirim button {
 	border-radius: 40px;
 }
 
+.warning {
+  font-weight: bold;
+  color: red;
+}
+
+.errorval {
+	color: red;
+	font-size: 15px;
+}
+
+.errorRegis {
+	color: red;
+	font-size: 15px;
+}
 
 .hidden {
   opacity:0;
@@ -66,3 +88,149 @@ h3 {
   left:10px;
 }
 
+.logo {
+  position: absolute;
+}
+
+.logo h1 {
+  position: relative;
+  display: block;
+  -webkit-animation: fadeIn 1.5s linear;
+          animation: fadeIn 1.5s linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.syarat ul {
+  position: absolute;
+}
+
+.syarat li:hover {
+  background-color: white;
+  color: #267C72;
+  border: 1px solid #267C72;
+  margin: 3px 20px;
+  cursor: pointer;
+}
+
+.syarat li {
+  position: relative;
+  display: block;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 2px 15px;
+  margin: 3px 0px;
+  -webkit-animation: fadeIn 1.5s linear;
+          animation: fadeIn 1.5s linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.syarat li:nth-child(1) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.syarat li:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.syarat li:nth-child(3) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.syarat li:nth-child(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.syarat li:nth-child(5) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.syarat li:nth-child(6) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.syarat li:nth-child(7) {
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+
+.syarat li:nth-child(8) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.syarat li:nth-child(9) {
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+
+.syarat li:nth-child(10) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header {
+  color: #fff;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
