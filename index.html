@@ -81,11 +81,22 @@
               </div>
             <div class="col-xl-8">
              <div class="row bg-light shadow pt-2 border mb-3">
-                <div class="col-xl-6">
+                <div class="col-xl-12">
                   <div class="form-group valid-form has-feedback">
                     <label class="syarat" for="nama">Nama Lengkap</label>
                     <input reqired  value="" type="text" class="form-control" id="nama" name="nama" placeholder="Masukan nama" >
                      <span  class="errorval errorRegis" id="errorName"></span>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="form-group valid-form has-feedback">
+                    <label class="syarat" for="divisi">Jenis Kelamin</label>
+                    <select class="form-control" name="divisi" id="divisi">
+                      <option value="">--Pilih--</option>
+                      <option value="laki-laki">Laki-laki</option>
+                      <option value="perempuan">Perempuan</option>                       
+                    </select>
+                    <span class="errorval errorRegis" id="errorDivisi"></span>
                   </div>
                 </div>
                 <div class="col-xl-6">
