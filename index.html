@@ -51,16 +51,16 @@
         </div>
         <div class="col-xl-6">
           <ul class="syarat">
-            <li class="text-center">Persyaratan</li>
-            <li class="">Muslim/Muslimah</li>
-            <li class="">Belum Menikah</li>
-            <li class="">Lulusan SMK/SMA Sederajat</li>
-            <li class="">Tidak Sedang Berkuliah/Bekerja</li>
-            <li class="">Usia Maksimal 23 Tahun</li>
-            <li class="">Punya Passion di bidang IT</li>
-            <li class="">Mendapatkan Izin Orang Tua</li>
-            <li class="">Siap Belajar dan Berkarya selama 3 Tahun</li>
-            <li class="">Memiliki Laptop, Bila Tidak ada dapat Meminjam Terlebih Dahulu</li>
+            <li class=""><h4><i class="material-icons">done_all</i> Persyaratan</h4></li>
+            <li class=""><i class="material-icons md-18">done_outline</i>  Muslim/Muslimah</li>
+            <li class=""><i class="material-icons md-18">done_outline</i>  Belum Menikah</li>
+            <li class=""><i class="material-icons md-18">done_outline</i>  Lulusan SMK/SMA Sederajat</li>
+            <li class=""><i class="material-icons md-18">done_outline</i>  Tidak Sedang Berkuliah/Bekerja</li>
+            <li class=""><i class="material-icons md-18">done_outline</i>  Usia Maksimal 23 Tahun</li>
+            <li class=""><i class="material-icons md-18">done_outline</i>  Punya Passion di bidang IT</li>
+            <li class=""><i class="material-icons md-18">done_outline</i>  Mendapatkan Izin Orang Tua</li>
+            <li class=""><i class="material-icons md-18">done_outline</i>  Siap Belajar dan Berkarya selama 3 Tahun</li>
+            <li class=""><i class="material-icons md-18">done_outline</i>  Memiliki Laptop, Bila Tidak ada dapat Meminjam Terlebih Dahulu</li>
           </ul>
         </div>
       </div>
@@ -597,18 +597,85 @@
           <i class="material-icons">
           folder_open
           </i> Dokumen</h3>
-          <div class="px-2 row bg-light shadow pt-2 border mb-3 px-3">
-            <div class="form-group has-feedback">
-              <label class="syarat" for="disc">Silahkan unduh file di bawah <br> <a class="btn btn-outline-primary" href="http://pendaftaran.pondokit.com/public/doc/DISC.xlsx">Download</a><br>Kemudian setelah di isi upload kembali di bawah ini</label>
+          <div class="px-2 row bg-light shadow pt-4 py-2 border">
+            <div class="col-xl-6">
+              <ol>
+                <h5>Ketentuan Mengisi</h5>
+                <li>Isilah indentias diri dengan menggunakan huruf KAPITAL.<br>
+                 Untuk isian Pekerjaan diisi dengan: CALON SANTRI <br>
+                 Untuk isian Organisasi diisi dengan: PONDOK  <br>
+                 Untuk isian Yang merekomendasikan anda untuk mengikuti tes ini 
+                 diisi dengan: Manager HRD 
+                </li>
+                <li>
+                  Bilah sudah terisi semua lalu klik NEXT.
+                </li>
+                <li>
+                  Pilihlah 7 pernyataan yg PALING COCOK DENGAN DIRI ANDA. Bila sudah memilih lalu klik NEXT.
+                </li>
+                <li>
+                  Pilihlah 7 pernyataan yg PALING TIDAK SESUAI DENGAN DIRI ANDA. Bila sudah memilih lalu klik NEXT.
+                </li>
+                <li>
+                  Pilihlah 7 pernyataan yg COCOK DENGAN DIRI ANDA.  Bila sudah memilih lalu klik NEXT.
+                </li>
+                <li>
+                   Pilihlah minimal 5 pernyataan yg TIDAK COCOK DENGAN DIRI ANDA. Bila sudah memilih lalu klik FINISH.
+                </li>
+                <li>
+                  Selanjutnya klik save dalam bentuk PDF   (Nama file PDF nantinya secara otomatis adalah: (st30_NAMA ANDA).
+                </li>
+                <li>
+                  Kirimkanlah file PDF hasil test TALENTS MAPPING tersebut melalui kolom di bawah ini kepada kami.  
+                </li>
+                <li>
+                  IKUTILAH LANGKAH-LANGKAH DI ATAS DENGAN SEKSAMA!
+                </li>
+              </ol>
+            </div>
+            <div class="col-xl-6">
+              <h5>Ikuti tes temubakat ini melalui link berikut ini <br>
+                <a href="http://temubakat.com/id/index.php/main/disp/tes">Temu Bakat</a>
+                </h5>
+              <img class="img-fluid img-thumbnail" src="Petunjuk.png">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="tallent_mapping"> Hasil Talent Mapping</label>
+                <p style="color: red">Upload hasil Talents Mapping kamu pada kolom di bawah ini sesuai ketentuan di atas.</p>
+                
+                <input reqired type="file" name="slip" id="tallent_mapping" ></input>
+      
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="surat_izin"> Surat Izin Orang Tua</label>
+                <p style="color: red";>Upload hasil scan dalam bentuk PDF surat pernyataan izin dari orang tua tersebut pada kolom ini maksimum 10 MB. Nama file anda ini harus berformat tanpa tanda kurung (Nama Anda - Surat Izin Orang Tua).</p>
+                
+                <input accept=".pdf" reqired type="file" name="slip" id="surat_izin" ></input>
+                
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group has-feedback">
+                <label class="syarat" for="slip"> Bukti Slip Gaji Orang Tua</label><br>
+                <p style="color: red;">Upload gambar scan slip gaji orang tua</p>
+                <input accept="image/gif,image/jpeg,image/jpg,image/png," reqired type="file" name="slip" id="slip" ></input>
+                
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="form-group has-feedback">
+              <label class="syarat" for="disc"> <h5>Silahkan unduh file di bawah</h5> <a class="btn btn-outline-primary" href="http://pendaftaran.pondokit.com/public/doc/DISC.xlsx">Download</a><br>Kemudian setelah di isi upload kembali di bawah ini</label>
               <p style="color: red;">Hanya file XLSX yang boleh di Upload</p>
               <input reqired  value="" type="file" name="disc" id="disc">
               <span  class="errorval errorRegis" id="error_disc"></span>
+            </div>
             </div>
           </div>
 
           <div class="text-center row  py-4 mb-3">
             <div class="col-xl-12">
-              <p class="warning">*pastikan diisi dengan benar, karena anda hanya dapat mendaftar sebanyak 1 kali</p>
+              <p class="warning"> *Pastikan di isi dengan benar, karena anda hanya dapat mendaftar sebanyak 1 kali</p>
             </div>
             <div class="form-group kirim">
               <button style="font-weight: bold;" name="submit" value="submit" id="submit" type="submit" class="shadow btn btn-outline-primary btn-lg px-5">Kirim Data</button>

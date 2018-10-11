@@ -53,6 +53,10 @@ h3 {
 .warning {
   font-weight: bold;
   color: red;
+  border: 1px solid red;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: monospace;
 }
 
 .errorval {
@@ -106,24 +110,24 @@ h3 {
 }
 
 .syarat li:hover {
-  background-color: white;
-  color: #267C72;
-  border: 1px solid #267C72;
-  margin: 3px 20px;
+  margin: 5px 30px;
   cursor: pointer;
 }
 
 .syarat li {
+  margin: 5px 0;
   position: relative;
   display: block;
   font-weight: bold;
-  border: 1px solid white;
-  padding: 2px 15px;
-  margin: 3px 0px;
   -webkit-animation: fadeIn 1.5s linear;
           animation: fadeIn 1.5s linear;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+}
+
+.syarat h4 {
+  font-family: monospace;
+  font-size: 25px;
 }
 
 .syarat li:nth-child(1) {
@@ -194,9 +198,9 @@ h3 {
   color: #fff;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
+  -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
@@ -234,3 +238,34 @@ h3 {
     background-position: 0% 50%
   }
 }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
