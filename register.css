@@ -1,0 +1,71 @@
+body {
+	background-color: #53BAE4;
+}
+
+h3 {
+	font-family: monospace;
+	font-size: 30px;
+	color: #2A5184;
+	border: 1px solid white;
+	padding-left: 10px;
+}
+
+.upload input {
+	display: none;
+}
+
+.upload label {
+	margin: 10px auto;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.kirim {
+	margin: 0 auto;
+}
+
+.kirim button {
+	border-radius: 30px;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+.form h1 {
+	color: #2A5184;
+}
+
+label {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.daftar a {
+    border-radius: 40px;
+    text-align: center;
+}
+
+.warning {
+  font-weight: bold;
+  color: red;
+  border: 1px solid red;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.errorval {
+	color: red;
+	font-size: 15px;
+}
+
+.errorRegis {
+	color: red;
+	font-size: 15px;
+}
+
+.hidden {
+  opacity:0;
+}
